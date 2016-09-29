@@ -19,6 +19,7 @@ class Customer
       this_amount = 0
       # determine amounts for each line
       case element.movie.price_code
+        
       when Movie::REGULAR
         this_amount += 2
         this_amount += (element.days_rented - 2) * 1.5 if element.days_rented > 2
