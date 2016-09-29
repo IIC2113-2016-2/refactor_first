@@ -6,12 +6,10 @@ require 'minitest/autorun'
 describe "Movie rentals" do
   def setup
     @c = Customer.new("Jane")
-    @m1 = Movie.new("1984", 0)
-    @m2 = Movie.new("Platoon", 1)
-    @r1 = Rental.new(@m1, 2)
-    @r2 = Rental.new(@m2, 3)
-    @c.add_rental(@r1)
-    @c.add_rental(@r2)
+    @m1 = RegularMovie.new("1984")
+    @m2 = NewMovie.new("Platoon")
+    @c.add_rental(@m1, 2)
+    @c.add_rental(@m2, 3)
   end
 
   it "correctly does statement" do
