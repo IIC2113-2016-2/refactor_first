@@ -8,5 +8,5 @@ class Movie
 
   def initialize(title, price_code)
     @title, @price_code = title, price_code
-  end 
+  end
 end
